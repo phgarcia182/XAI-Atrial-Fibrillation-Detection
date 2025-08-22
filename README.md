@@ -30,6 +30,28 @@ Este proyecto presenta un método para la detección automatizada de Fibrilació
 
 ---
 
+## Sobre el Conjunto de Datos
+
+⚠️ **Nota Importante:** Por motivos de confidencialidad y debido a que los datos forman parte de una investigación en curso protegida por acuerdos de privacidad, **no es posible compartir públicamente el conjunto de datos original** utilizado en este estudio.
+
+Sin embargo, para garantizar la reproducibilidad metodológica, a continuación se detalla la estructura y las características de los datos empleados, permitiendo que otros investigadores puedan aplicar el mismo análisis a conjuntos de datos alternativos.
+
+### Descripción de los Datos
+
+* **Fuente:** Señales de ECG de derivación única (single-lead) obtenidas de dispositivos portátiles.
+* **Estructura:** El conjunto de datos procesado es una tabla (formato CSV) donde cada fila corresponde a un registro de ECG y cada columna a una característica extraída.
+* **Características (Features):** Se extrajo un conjunto de características fisiológicas de cada señal. Para una descripción detallada de cada una, por favor consulte la **Tabla 1 del paper** de esta investigación.
+* **Variable Objetivo:** La columna a predecir (`target`) es binaria, indicando la presencia (1) o ausencia (0) de Fibrilación Auricular.
+
+### Alternativa con Datos Públicos
+
+Para quienes deseen replicar el flujo de trabajo de XAI con un conjunto de datos público y de características similares, recomendamos utilizar la base de datos de **PhysioNet**. Específicamente, el desafío **"AF Classification from a Short Single Lead ECG Recording"** es una excelente opción.
+
+-   **Enlace al Desafío:** [PhysioNet Challenge 2017](https://physionet.org/content/challenge-2017/1.0.0/)
+-   **Adaptación:** Para usar estos datos, se debería implementar un script de preprocesamiento que extraiga las mismas características descritas en nuestro paper a partir de las señales en formato `.mat` provistas por PhysioNet.
+
+---
+
 ## Cómo Replicar este Estudio
 
 Para ejecutar el análisis y obtener los resultados presentados, sigue estos pasos.
